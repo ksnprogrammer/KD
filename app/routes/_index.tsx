@@ -10,44 +10,44 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 dark:from-gray-800 dark:via-gray-900 dark:to-black p-4">
-      <div className="flex flex-col items-center gap-12 text-center">
+    // Use a slightly more subtle gradient or a solid color from the theme
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background-light dark:bg-background-darker p-6">
+      <div className="flex flex-col items-center gap-10 text-center max-w-2xl"> {/* Increased gap */}
         <header className="flex flex-col items-center gap-6">
            <img
-            src="/logo-light.png" // Your Knight Dragons logo
+            src="/logo-light.png"
             alt="Knight Dragons Logo"
-            className="h-24 w-auto dark:hidden" // Adjust size as needed
+            className="h-28 w-auto dark:hidden" // Slightly larger logo
           />
            <img
-            src="/logo-dark.png" // Your Knight Dragons logo
+            src="/logo-dark.png"
             alt="Knight Dragons Logo"
-            className="h-24 w-auto hidden dark:block" // Adjust size as needed
+            className="h-28 w-auto hidden dark:block" // Slightly larger logo
           />
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
+          <h1 className="text-5xl font-bold tracking-tight text-text-DEFAULT dark:text-text-darker sm:text-6xl"> {/* Larger heading */}
             Welcome to Knight Dragons!
           </h1>
-          <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300">
+          <p className="mt-3 text-xl leading-8 text-text-light dark:text-text-dark"> {/* Larger paragraph */}
             Embark on a Learning Quest and conquer the Grade 5 Scholarship Exam.
           </p>
         </header>
 
-        <div className="mt-6 flex items-center justify-center gap-x-6">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6"> {/* Stack buttons on small screens */}
           <Link
             to="/login"
-            className="rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            className="btn btn-primary w-full sm:w-auto px-6 py-3 text-base" // Use component classes, adjust padding/text size
           >
             Login
           </Link>
           <Link
             to="/signup"
-            className="rounded-md bg-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+            className="btn btn-secondary w-full sm:w-auto px-6 py-3 text-base" // Use component classes
           >
             Start Adventure <span aria-hidden="true">→</span>
           </Link>
         </div>
 
-         {/* Optional: Add a small footer or more info */}
-         <footer className="mt-10 text-center text-xs text-gray-500 dark:text-gray-400">
+         <footer className="mt-12 text-sm text-text-light dark:text-text-dark"> {/* Increased margin */}
             Making learning fun for Grade 5 students in Sri Lanka.
          </footer>
       </div>
